@@ -2,10 +2,8 @@
 
 Discordサーバーでゲーミング夜更かし勢を監視して寝るようにつつくパイモンのリポジトリです。非公式の非常食です。
 
-PC起動時に実行させるようにしてDiscord Botのタスクとして毎分動作で  
-毎時0分と30分にチェックします。  
-深夜2時～午前12時に指定したチャンネルにメンバーがいると  
-チャンネルメンションして警告します。
+PC起動時に実行させるようにしてDiscord Botのタスクとして毎分動作で毎時0分と30分にチェックします。  
+深夜2時～午前12時に指定したチャンネルにメンバーがいるとチャンネルメンションして警告します。
 
 - [動作設定手順](#動作設定手順)
 - [構築手順](#構築手順)
@@ -22,12 +20,18 @@ Pythonをインストールしておいてください。
     python -m pip install -r "%USERPROFILE%\workspace\paimon-is-watching-you\requirement.txt"
     ```
 
-3. 環境変数の設定
+3. 環境変数の設定（※`.env.example`を`.env`にリネームして以下を設定してください。）
    1. Botのトークン：`DISCORD_WATCH_PAIMON_TOKEN`
-   2. チャンネルのID：`TORTE_VOICE_CHANNEL_ID`
+   2. チャンネルのID：`PAIMON_WATCHES_CHANNEL_ID`
+   3. 監視タイミング：`PAIMON_MONITOR_TIMING`  
+   ※これは**カンマ区切りで分数を記述**してください。
+   4. 対象時間：`PAIMON_WATCH_START_HOUR`, `PAIMON_WATCH_END_HOUR`
+   5. 怒るときの絵文字：`PAIMON_EMOJI_NAME_ID`
+   6. お怒りの言葉：`PAIMON_ANGRY_WORDS`
 4. タスクスケジューラに実行タスクを追加
    1. **全般**：`最上位特権`、`Windows10`
    2. **トリガー**：`スタートアップ時`
+      1. **遅延時間を必ず入れてください。** Discordが自動起動するまでは必要みたいです。
    3. **操作**：`プログラムの実行`
       1. **プログラム/スクリプト**
 
