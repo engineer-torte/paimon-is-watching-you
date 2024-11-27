@@ -77,7 +77,7 @@ async def check_voice(is_test=False):
 
 # テスト実行コマンド
 @bot.command()
-async def test_check():
+async def test_check(ctx):
     await check_voice(is_test=True)
 
 # 停止コマンド
