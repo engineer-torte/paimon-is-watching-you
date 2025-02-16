@@ -2,7 +2,7 @@
 
 Discordサーバーでゲーミング夜更かし勢を監視して寝るようにつつくパイモンのリポジトリです。非公式の非常食です。
 
-PC起動時に実行させるようにしてDiscord Botのタスクとして毎分動作で毎時0分と30分にチェックします。
+PC起動時に実行させるようにしてDiscord Botのタスクとして毎分動作で毎時0分と30分にチェックします。  
 深夜2時～午前12時に指定したチャンネルにメンバーがいるとチャンネルメンションして警告します。
 
 ※試験的に静的解析ツール（ruff, black）を導入。
@@ -25,7 +25,7 @@ Pythonをインストールしておいてください。
 3. 環境変数の設定（※`.env.example`を`.env`にリネームして以下を設定してください。）
    1. Botのトークン：`DISCORD_WATCH_PAIMON_TOKEN`
    2. チャンネルのID：`PAIMON_WATCHES_CHANNEL_ID`
-   3. 監視タイミング：`PAIMON_MONITOR_TIMING`
+   3. 監視タイミング：`PAIMON_MONITOR_TIMING`  
    ※これは**カンマ区切りで分数を記述**してください。
    4. 対象時間：`PAIMON_WATCH_START_HOUR`, `PAIMON_WATCH_END_HOUR`
    5. 怒るときの絵文字：`PAIMON_EMOJI_NAME_ID`
