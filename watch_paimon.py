@@ -76,11 +76,14 @@ async def check_voice(is_test=False):
         pass # 通話チャンネル以外はパイモンの仕事がない。
 
 # テスト実行コマンド
+# todo: コマンドを表示させたいけどできてない…
+# @bot.command(name='test_check', description='オイラが試しに見に行くぞ！')
 @bot.command()
 async def test_check(ctx):
     await check_voice(is_test=True)
 
 # 停止コマンド
+# @bot.command(name='shutdown', description='オイラ…もういらない…？')
 @bot.command()
 @commands.is_owner()
 async def shutdown(ctx):
