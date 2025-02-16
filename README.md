@@ -12,7 +12,7 @@ PC起動時に実行させるようにしてDiscord Botのタスクとして毎�
 
 ## 動作設定手順
 
-Pythonをインストールしておいてください。
+Pythonをインストールしておいてください。  
 構築にはMicrosoft StoreにあるPythonを使用しています。
 
 1. ソースコードの配置（`%USERPROFILE%\workspace\paimon-is-watching-you`）
